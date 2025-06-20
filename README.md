@@ -1,6 +1,8 @@
-# Welcome to your CDK TypeScript project
+# Welcome to project ecommerce API serveless 
 
-This is a blank project for CDK development with TypeScript.
+This API was created using Amazon AWS technologies, we use cdk (cloud development kit) to provision the infrastructure. In the image below are the tools that were used to create the API.
+
+![Screenshot da aplicação](./assets/curso_serverless.png)
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
