@@ -1,11 +1,83 @@
-# Welcome to project ecommerce API serveless 
+# 🛒 E-commerce API - Serverless (AWS CDK)
 
-This API was created using Amazon AWS technologies, we use cdk (cloud development kit) to provision the infrastructure. In the image below are the tools that were used to create the API.
+![Build](https://github.com/SEU_USUARIO/NOME_DO_REPO/actions/workflows/deploy.yml/badge.svg)  
+> *Replace `SEU_USUARIO` and `NOME_DO_REPO` with your actual GitHub username and repo.*
 
-![Screenshot da aplicação](./assets/curso_serverless.png)
+This is a **serverless API project** for an e-commerce platform, built using **Amazon Web Services (AWS)** technologies. The entire infrastructure is provisioned using the **AWS Cloud Development Kit (CDK)** with a focus on scalability, security, performance, and best practices based on **Event-Driven Architecture (EDA)**.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+---
 
+## 🌐 Live Demo
+
+> 🔗 [https://api-ecommerce.example.com](https://api-ecommerce.example.com)  
+> *(Replace this with your actual domain, or remove this section if not deployed yet)*
+
+---
+
+## 🚀 Technologies Used
+
+- **AWS Lambda** – Business logic implemented in serverless functions  
+- **Amazon API Gateway** (REST and WebSocket) – Public API exposure  
+- **Amazon Cognito** – User authentication and authorization  
+- **Amazon SNS & SQS** – Asynchronous communication via events  
+- **Amazon SES** – Automatic email notifications  
+- **Amazon S3** – Invoice file storage (PDFs)  
+- **Amazon CloudWatch, X-Ray, Alarms** – Monitoring and observability  
+- **AWS CDK (TypeScript)** – Infrastructure as Code (IaC)  
+- **AWS CloudFormation** – Deployment and infrastructure provisioning  
+
+---
+
+## 🧩 Architecture Overview
+
+![Project Architecture](./docs/architecture.png) <!-- Update path as needed -->
+
+This system follows an **event-driven architecture**, ensuring loosely-coupled services, horizontal scalability, and async workflows.
+
+---
+
+## 📦 Key Features
+
+- User authentication and authorization via AWS Cognito  
+- Product catalog management (CRUD)  
+- Order placement and tracking  
+- Email notifications triggered by events  
+- Invoice generation and storage (PDF in S3)  
+- WebSocket support for real-time updates  
+- Asynchronous pipelines via SNS and SQS  
+
+---
+
+## 📌 API Endpoints (REST)
+
+### Authentication
+- `POST /pre-authentication` — Pre-authentication Lambda trigger  
+- `POST /confirmation` — Post-signup confirmation (Cognito triggers)
+
+### Products
+- `GET /products` — List all products  
+- `POST /products` — Create a new product  
+
+### Orders
+- `POST /orders` — Create a new order  
+- `GET /orders/{id}` — Get order by ID  
+
+### Invoices
+- `GET /invoices/{id}` — Retrieve invoice details  
+- `GET /invoice-url` — Get pre-signed S3 invoice URL  
+
+---
+
+## 🔄 Event-Driven Workflow Examples
+
+- `ProductCreated` → Event published to EventBridge  
+- `OrderCreated` → Notified via SNS, handled asynchronously  
+- `OrderConfirmed` → Enqueued in SQS → triggers SES email  
+- `InvoiceGenerated` → Saved in S3 + emits `InvoiceEvent`  
+
+---
+
+## 🛠️ How to Run the Project
 ## Useful commands
 
 * `npm run build`   compile typescript to js
