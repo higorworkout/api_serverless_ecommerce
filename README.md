@@ -1,18 +1,10 @@
 # 🛒 E-commerce API - Serverless (AWS CDK)
 
-![Build](https://github.com/SEU_USUARIO/NOME_DO_REPO/actions/workflows/deploy.yml/badge.svg)  
+![Build](https://github.com/higorworkout/api_serverless_ecommerce/actions/workflows/deploy.yml/badge.svg)  
 > *Replace `SEU_USUARIO` and `NOME_DO_REPO` with your actual GitHub username and repo.*
 
 This is a **serverless API project** for an e-commerce platform, built using **Amazon Web Services (AWS)** technologies. The entire infrastructure is provisioned using the **AWS Cloud Development Kit (CDK)** with a focus on scalability, security, performance, and best practices based on **Event-Driven Architecture (EDA)**.
 
----
-
-## 🌐 Live Demo
-
-> 🔗 [https://api-ecommerce.example.com](https://api-ecommerce.example.com)  
-> *(Replace this with your actual domain, or remove this section if not deployed yet)*
-
----
 
 ## 🚀 Technologies Used
 
@@ -30,7 +22,7 @@ This is a **serverless API project** for an e-commerce platform, built using **A
 
 ## 🧩 Architecture Overview
 
-![Project Architecture](./docs/architecture.png) <!-- Update path as needed -->
+![Project Architecture](./assets/curso_serverless.png) <!-- Update path as needed -->
 
 This system follows an **event-driven architecture**, ensuring loosely-coupled services, horizontal scalability, and async workflows.
 
